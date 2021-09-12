@@ -50,7 +50,7 @@ def send_infomation(event):
     user_id = event.source.user_id
     if event.message.text == '課題は？':
         df_rest = getInfoFromUnipa(userID=UserID, PassWord=PassWord)
-        rest_list=["残りの課題はこちらです"]
+        rest_list=["残りの課題はこちらです\n"]
         for _,v in df_rest.iterrows():
             kadai = v["課題名"]
             sime = v["課題提出終了日時"]
